@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Growth Accelerator | Everts Digital</title>
+    <meta name="description" content="Get 20-40% more calls and bookings in 90 days. Guaranteed, or you don't pay. Local SEO, Google Ads, and SMS/Email marketing for service businesses.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark-bg: #0a0a0a;
+            --dark-alt: #0f0f0f;
+            --secondary-dark: #1a1a1a;
+            --accent-gold: #d4af37;
+            --cream: #f5f3f0;
+            --text-light: #e8e8e8;
+            --text-muted: #a8a8a8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Noise/Grain Texture Overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="2"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.04"/></svg>');
+            background-repeat: repeat;
+            pointer-events: none;
+            z-index: 999;
+            mix-blend-mode: overlay;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            color: var(--text-light);
+        }
+
+        a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Navigation - TRULY FLOATING */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: transparent;
+            border-bottom: none;
+            backdrop-filter: none;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Nav scrolled state - subtle background and filter */
+        nav.scrolled {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cream);
+        }
+
+        nav .cta-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-gold);
+            color: var(--dark-bg);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        nav .cta-btn:hover {
+            background-color: var(--cream);
+            transform: translateY(-2px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section styling - ALL SECTIONS USE PURE BLACK */
+        section {
+            padding: 6rem 2rem;
+            position: relative;
+            background-color: var(--dark-bg);
+        }
+
+        section.hero {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Eclipse Glow Ring - Behind Hero Content */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 40%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: 1;
+            animation: eclipseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes eclipseGlow {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translate(-48%, -52%) scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        /* Ambient Orb - Slow Drift */
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.06), transparent 70%);
+            top: 10%;
+            right: -10%;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            animation: orbDrift 15s ease-in-out infinite;
+        }
+
+        @keyframes orbDrift {
+            0%, 100% {
+                transform: translateX(0) translateY(0);
+            }
+            25% {
+                transform: translateX(-40px) translateY(60px);
+            }
+            50% {
+                transform: translateX(-80px) translateY(0);
+            }
+            75% {
+                transform: translateX(-40px) translateY(-60px);
+            }
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        /* Grid Pattern Overlay */
+        .hero .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--cream);
+            max-width: 800px;
+        }
+
+        .hero .subheadline {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .primary-btn {
+            padding: 1rem 2.5rem;
+            background-color: var(--accent-gold);
+            color: var(--dark-bg);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            min-width: 300px;
+        }
+
+        .primary-btn:hover {
+            background-color: var(--cream);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .trust-line {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Divider with Subtle Gradient */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+            margin: 4rem 0;
+            opacity: 0.5;
+        }
+
+        /* Section numbers */
+        .section-number {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        /* Value Statement */
+        .value-statement {
+            text-align: center;
+        }
+
+        .value-statement h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--cream);
+        }
+
+        .value-statement p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            padding: 2rem;
+            background-color: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover {
+            border-color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .step-card .checkmark {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--cream);
+        }
+
+        .step-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            background-color: rgba(26, 26, 26, 0.8);
+            border: 2px solid var(--accent-gold);
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .guarantee h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--cream);
+            line-height: 1.4;
+        }
+
+        .guarantee-detail {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .guarantee-item {
+            padding: 1rem;
+            border-left: 2px solid var(--accent-gold);
+            text-align: left;
+        }
+
+        .guarantee-item h4 {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .guarantee-item p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Offer Stack */
+        .offer-stack {
+            text-align: center;
+        }
+
+        .offer-stack h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--cream);
+        }
+
+        .offer-stack > p {
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+
+        .stack-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stack-item {
+            padding: 2rem;
+            background-color: rgba(26, 26, 26, 0.6);
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 8px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .stack-item:hover {
+            transform: translateY(-8px);
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+
+        .stack-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .stack-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Process */
+        .process {
+            text-align: center;
+        }
+
+        .process h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--cream);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            padding: 2.5rem 2rem;
+            background-color: rgba(26, 26, 26, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .process-step::before {
+            content: attr(data-number);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-gold);
+            color: var(--dark-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+        }
+
+        .process-step:hover {
+            border-color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+
+        .process-step h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem 0;
+            color: var(--cream);
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Results */
+        .results {
+            text-align: center;
+        }
+
+        .results h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--cream);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.03));
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: var(--accent-gold);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.05));
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* FAQ */
+        .faq {
+            text-align: center;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--cream);
+        }
+
+        .accordion {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .accordion-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 1.5rem;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            color: var(--accent-gold);
+        }
+
+        .accordion-header h3 {
+            font-size: 1.1rem;
+            color: var(--cream);
+            margin: 0;
+            flex: 1;
+        }
+
+        .accordion-toggle {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-toggle.open {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0;
+        }
+
+        .accordion-content.open {
+            max-height: 300px;
+            padding: 0 0 1rem 0;
+        }
+
+        .accordion-content p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Mid CTA Section */
+        .mid-cta {
+            text-align: center;
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin: 3rem 0;
+        }
+
+        .mid-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--cream);
+        }
+
+        .mid-cta p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .final-cta .pricing {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .final-cta .pricing .gold {
+            color: var(--accent-gold);
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .secondary-btn {
+            padding: 1rem 2.5rem;
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 300px;
+        }
+
+        .secondary-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--dark-bg);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .contact-info a {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Cursor glow effect */
+        .cursor-glow {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(50px);
+            z-index: 998;
+            display: none;
+        }
+
+        body.has-mouse-moved .cursor-glow {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subheadline {
+                font-size: 1.05rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .primary-btn,
+            .secondary-btn {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .steps-grid,
+            .stack-items,
+            .process-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guarantee {
+                padding: 2rem;
+            }
+
+            .guarantee-detail {
+                grid-template-columns: 1fr;
+            }
+
+            .guarantee-item {
+                border-left: none;
+                border-top: 2px solid var(--accent-gold);
+                padding-top: 1.5rem;
+            }
+
+            .hero::before {
+                width: 400px;
+                height: 400px;
+            }
+
+            .hero::after {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cursor Glow Element -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Everts Digital</div>
+            <button class="cta-btn" onclick="scrollToSection('final-cta')">Book a Call</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="reveal">20–40% More Calls in 90 Days. Guaranteed.</h1>
+            <p class="subheadline reveal">Managed SEO, Google Ads, and SMS/Email marketing built specifically for local service businesses. No retainers. No surprises. Just results.</p>
+            <div class="hero-cta reveal">
+                <button class="primary-btn" onclick="scrollToSection('final-cta')">Book Your Growth Assessment</button>
+                <p class="trust-line">Starting at $2,499/month</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Value Statement -->
+    <section class="value-statement">
+        <div class="container">
+            <p class="section-number">01 / How We Drive Local Growth</p>
+            <h2>A Simple, Proven Approach</h2>
+            <p>Most agencies promise the world and disappear. We're different. We commit to measurable results in a structured process that moves fast, stays transparent, and compounds over time.</p>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="checkmark">✓</div>
+                    <h3>Audit</h3>
+                    <p>Deep dive into your local presence, competitors, and market opportunity</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="checkmark">✓</div>
+                    <h3>Optimize</h3>
+                    <p>Build and refine your SEO foundation, Google presence, and ad strategy</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="checkmark">✓</div>
+                    <h3>Accelerate</h3>
+                    <p>Launch campaigns, test messaging, and drive consistent lead flow</p>
+                </div>
+                <div class="step-card reveal">
+                    <div class="checkmark">✓</div>
+                    <h3>Scale</h3>
+                    <p>Amplify what works and compound growth across all channels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Guarantee Section -->
+    <section>
+        <div class="container">
+            <p class="section-number">02 / The Guarantee</p>
+            <div class="guarantee reveal">
+                <h2>If You Don't See Measurable Growth in 90 Days, You Don't Pay. Period.</h2>
+                <div class="guarantee-detail">
+                    <div class="guarantee-item">
+                        <h4>No Partial Billing</h4>
+                        <p>We either deliver results, or we work for free</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <h4>No Handoffs</h4>
+                        <p>Your dedicated team sees it through to completion</p>
+                    </div>
+                    <div class="guarantee-item">
+                        <h4>No Guesswork</h4>
+                        <p>Clear KPIs, weekly reporting, monthly strategy calls</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- What's Included -->
+    <section class="offer-stack">
+        <div class="container">
+            <p class="section-number">03 / What's Included</p>
+            <h2>The Complete Growth Stack</h2>
+            <p>Everything you need to dominate your local market, in one integrated system.</p>
+            <div class="stack-items">
+                <div class="stack-item reveal">
+                    <h3>Local SEO Domination</h3>
+                    <p>Google Business Profile optimization, local citations, strategic content, schema markup, and reviews management to own your local search results.</p>
+                </div>
+                <div class="stack-item reveal">
+                    <h3>Google Ads Management</h3>
+                    <p>Precision targeting, bid optimization, ad copy testing, and landing page refinement to lower your cost per lead and maximize ROI.</p>
+                </div>
+                <div class="stack-item reveal">
+                    <h3>SMS & Email Marketing</h3>
+                    <p>Weekly campaigns, automated sequences, customer nurture flows, and targeted promotions to turn leads into repeat bookings.</p>
+                </div>
+                <div class="stack-item reveal">
+                    <h3>Website Speed & Performance</h3>
+                    <p>Technical SEO, page speed optimization, mobile responsiveness, and conversion rate improvement to maximize every visitor.</p>
+                </div>
+                <div class="stack-item reveal">
+                    <h3>Monthly Reporting & Strategy</h3>
+                    <p>Transparent dashboards, detailed analysis, strategy calls, and quarterly planning to keep growth on track and aligned.</p>
+                </div>
+                <div class="stack-item reveal">
+                    <h3>Dedicated Account Management</h3>
+                    <p>One point of contact. Fast decisions. Weekly check-ins. No bureaucracy, no waiting around for updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- How It Works -->
+    <section class="process">
+        <div class="container">
+            <p class="section-number">04 / How It Works</p>
+            <h2>Our Four-Step Process</h2>
+            <div class="process-grid">
+                <div class="process-step reveal" data-number="1">
+                    <h3>Discovery</h3>
+                    <p>We audit your local market, analyze competitors, identify gaps, and uncover the exact opportunities hiding in your business.</p>
+                </div>
+                <div class="process-step reveal" data-number="2">
+                    <h3>Architecture</h3>
+                    <p>We build a strategic roadmap with clear KPIs, success metrics, budget allocation, and a timeline for measurable results.</p>
+                </div>
+                <div class="process-step reveal" data-number="3">
+                    <h3>Execution</h3>
+                    <p>We launch campaigns, optimize continuously, test messaging, and manage every channel to drive consistent lead flow.</p>
+                </div>
+                <div class="process-step reveal" data-number="4">
+                    <h3>Scale</h3>
+                    <p>We amplify what works, compound results, refine strategy, and build your sustainable growth engine for long-term success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Results / Social Proof -->
+    <section class="results">
+        <div class="container">
+            <p class="section-number">05 / Real Results</p>
+            <h2>What Our Clients Achieve</h2>
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <div class="stat-number">425%</div>
+                    <div class="stat-label">Average Traffic Growth</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number">8.2x</div>
+                    <div class="stat-label">Average ROAS</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number">90</div>
+                    <div class="stat-label">Days to Measurable Results</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number">$2.4M</div>
+                    <div class="stat-label">Revenue Generated for Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <p class="section-number">06 / Common Questions</p>
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion reveal">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>How quickly will I see results?</h3>
+                        <span class="accordion-toggle">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Most clients see measurable improvements within 3-4 weeks. Depending on your market and starting point, we often see 20-40% growth in calls and bookings by day 90. Some industries move faster than others, but we guarantee measurable progress or we work for free.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>What if I've tried SEO before and it didn't work?</h3>
+                        <span class="accordion-toggle">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Most failed SEO campaigns lack strategy, consistency, or proper execution. We don't just publish content—we build a coordinated system across Google Business, local citations, reviews, technical SEO, and ads. We also run your first assessment completely free, so you'll know exactly what went wrong before and what we'll do differently.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>Do you work with businesses in my industry?</h3>
+                        <span class="accordion-toggle">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We specialize in local service businesses: HVAC, plumbing, electrical, roofing, landscaping, home services, dentists, medical practices, law firms, fitness studios, and more. If you're local and you take bookings or calls, we have a playbook for your industry. Schedule your free assessment and we'll confirm fit.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>What makes this different from other agencies?</h3>
+                        <span class="accordion-toggle">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Three things: First, we guarantee results—if you don't hit KPIs in 90 days, you don't pay. Second, we integrate all channels (SEO, ads, email, SMS) into one system, not separate silos. Third, you get a dedicated account manager, not a junior or offshore support person. We're small, we're selective, and we're all-in on your success.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <h3>What if I'm not happy?</h3>
+                        <span class="accordion-toggle">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>If you're not seeing measurable growth by day 90, you don't pay. We also host monthly strategy calls where we review results and adjust direction if needed. We're aligned on your success, and that means being honest about what's working and what isn't.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Mid CTA -->
+    <section>
+        <div class="container">
+            <div class="mid-cta reveal">
+                <h2>Ready to Grow?</h2>
+                <p>Start with a free growth assessment. We'll audit your local presence, identify gaps, and show you exactly where the opportunity is—no obligation, no pitch.</p>
+                <button class="primary-btn" onclick="scrollToSection('final-cta')">Schedule Your Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="final-cta">
+        <div class="container">
+            <h2>Let's Build Your Growth Engine</h2>
+            <div class="pricing">
+                Starting at <span class="gold">$2,499/month</span>
+            </div>
+            <div class="cta-buttons">
+                <button class="primary-btn" onclick="handleBookCall()">Book Your Call</button>
+                <button class="secondary-btn" onclick="handleEmail()">Email Us Instead</button>
+            </div>
+            <div class="contact-info">
+                <p>Have questions? Reach out to <a href="mailto:casey@evertsdigital.com">casey@evertsdigital.com</a> or call to schedule.</p>
+                <p>Free 30-minute assessment. No credit card required.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize cursor glow
+        const cursorGlow = document.querySelector('.cursor-glow');
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            document.body.classList.add('has-mouse-moved');
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorGlow.style.left = (mouseX - 100) + 'px';
+            cursorGlow.style.top = (mouseY - 100) + 'px';
+        });
+
+        // Create floating particles in hero
+        function createParticles() {
+            const hero = document.querySelector('.hero');
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animation = `float ${3 + Math.random() * 4}s ease-in-out infinite`;
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                hero.appendChild(particle);
+            }
+        }
+
+        // Float animation
+        const floatKeyframes = `
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0px) translateX(0px);
+                    opacity: 0.1;
+                }
+                50% {
+                    transform: translateY(-80px) translateX(${Math.random() * 40 - 20}px);
+                    opacity: 0.2;
+                }
+            }
+        `;
+
+        const style = document.createElement('style');
+        style.innerHTML = floatKeyframes;
+        document.head.appendChild(style);
+
+        createParticles();
+
+        // Scroll reveal animations
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Nav scroll state - add .scrolled class when scrolled > 100px
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const scrolled = window.scrollY;
+
+            if (scrolled > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Parallax effect on scroll for sections
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundPosition = `0 ${scrolled * 0.5}px`;
+            }
+        });
+
+        // Accordion functionality
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const toggle = header.querySelector('.accordion-toggle');
+
+            // Close other accordions
+            document.querySelectorAll('.accordion-content').forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('open');
+                    item.previousElementSibling.querySelector('.accordion-toggle').classList.remove('open');
+                }
+            });
+
+            // Toggle current
+            content.classList.toggle('open');
+            toggle.classList.toggle('open');
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // CTA handlers
+        function handleBookCall() {
+            window.location.href = 'mailto:casey@evertsdigital.com?subject=Growth%20Assessment%20Request&body=Hi%20Casey,%0A%0AI\'d%20like%20to%20schedule%20a%20growth%20assessment.%0A%0AMy%20business:%20%0ALocation:%20%0ACurrent%20marketing:%20%0A%0AThanks!';
+        }
+
+        function handleEmail() {
+            window.location.href = 'mailto:casey@evertsdigital.com';
+        }
+
+        // Smooth scroll for nav link
+        document.querySelector('nav .cta-btn').addEventListener('click', function() {
+            scrollToSection('final-cta');
+        });
+    </script>
+</body>
+</html>
