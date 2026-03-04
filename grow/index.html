@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Everts Digital — Local Service Business Growth | Guaranteed Results in 90 Days</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #d4af37;
+            --dark-base: #0a0a0a;
+            --dark-alt: #111111;
+            --dark-light: #0f0f0f;
+            --text-primary: #ffffff;
+            --text-secondary: #d0d0d0;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        html, body {
+            background-color: var(--dark-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: var(--font-sans);
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: #000;
+            border: 2px solid var(--gold);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--gold);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .eyebrow {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .highlight-gold {
+            color: var(--gold);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 40px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 24px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-base) 0%, var(--dark-light) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .guarantee-badge {
+            display: inline-block;
+            background-color: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            padding: 10px 16px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            border-left: 3px solid var(--gold);
+            padding-left: 20px;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== GUARANTEE SECTION ===== */
+        .guarantee {
+            background-color: var(--dark-alt);
+            text-align: center;
+        }
+
+        .guarantee h2 {
+            color: var(--gold);
+            margin-bottom: 24px;
+        }
+
+        .guarantee-main {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .guarantee-points {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .guarantee-point {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .guarantee-point::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            left: -20px;
+            top: 8px;
+        }
+
+        .guarantee-footer {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 32px;
+        }
+
+        /* ===== NUMBERS SECTION ===== */
+        .numbers {
+            background-color: var(--dark-base);
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .number-card {
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--gold);
+            padding: 40px 24px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .number-card:hover {
+            transform: translateY(-8px);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .number-card-value {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .number-card-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .numbers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== PROCESS SECTION ===== */
+        .process {
+            background-color: var(--dark-alt);
+        }
+
+        .process-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .process-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-top: 16px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .process-card {
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--gold);
+            padding: 32px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-8px);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .process-step {
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .process-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .process-card p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .process-cta {
+            text-align: center;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background-color: var(--dark-base);
+        }
+
+        .services h2 {
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--gold);
+            padding: 32px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .service-card h3 {
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .service-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .service-card li:last-child {
+            border-bottom: none;
+        }
+
+        .service-card li::before {
+            content: '✓ ';
+            color: var(--gold);
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== CASE STUDIES SECTION ===== */
+        .cases {
+            background-color: var(--dark-alt);
+        }
+
+        .cases h2 {
+            text-align: center;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .case-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 3px solid var(--gold);
+            padding: 32px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .case-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .case-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .case-content {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .case-quote {
+            font-style: italic;
+            color: var(--text-primary);
+            border-left: 2px solid var(--gold);
+            padding-left: 16px;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .cases-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== OBJECTIONS SECTION ===== */
+        .objections {
+            background-color: var(--dark-base);
+        }
+
+        .objections h2 {
+            text-align: center;
+        }
+
+        .objections-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .objection-card {
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid var(--gold);
+            padding: 32px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .objection-card:hover {
+            transform: translateY(-8px);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .objection-question {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .objection-answer {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .objections-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing {
+            background-color: var(--dark-alt);
+            text-align: center;
+        }
+
+        .pricing h2 {
+            margin-bottom: 40px;
+        }
+
+        .pricing-card {
+            background: rgba(212, 175, 55, 0.05);
+            border: 2px solid var(--gold);
+            padding: 48px 40px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+            transform: translateY(-8px);
+        }
+
+        .pricing-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .pricing-amount {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .pricing-note {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 32px;
+            list-style: none;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '✓ ';
+            color: var(--gold);
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        /* ===== FINAL CTA SECTION ===== */
+        .final-cta {
+            background: linear-gradient(135deg, var(--dark-base) 0%, var(--dark-light) 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            margin-bottom: 16px;
+        }
+
+        .final-cta-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .final-cta-email {
+            font-size: 16px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .final-cta-email:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #000000;
+            padding: 32px 40px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 60px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="eyebrow">Local Service Business Growth</div>
+            <h1>
+                20–40% More Calls in 90 Days.
+                <span class="highlight-gold">Guaranteed.</span>
+            </h1>
+            <p style="font-size: 18px; margin-bottom: 32px;">
+                Managed SEO, Google Ads, and SMS/Email marketing built specifically for local service businesses. No retainers. No surprises. Just results.
+            </p>
+            <div class="guarantee-badge">✓ If You Don't Grow, You Don't Pay</div>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('book')">Book Your Growth Assessment</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('process')">See Our Process</button>
+            </div>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number">425%</div>
+                    <div class="stat-label">Avg Traffic Growth</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8.2x</div>
+                    <div class="stat-label">Average ROAS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">90 Days</div>
+                    <div class="stat-label">To Results</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$2.4M</div>
+                    <div class="stat-label">Revenue Generated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GUARANTEE SECTION ===== -->
+    <section class="guarantee">
+        <div class="container">
+            <h2>WE GUARANTEE</h2>
+            <p class="guarantee-main">
+                If you don't see measurable growth in 90 days, you don't pay. Period.
+            </p>
+            <div class="guarantee-points">
+                <div class="guarantee-point">No Partial Billing.</div>
+                <div class="guarantee-point">No Handoffs.</div>
+                <div class="guarantee-point">No Guesswork.</div>
+            </div>
+            <p class="guarantee-footer">
+                Your growth is not considered delivered until the metrics prove it. That's not marketing — it's in the agreement.
+            </p>
+            <button class="btn btn-primary" onclick="scrollToSection('book')">Book Your Growth Assessment</button>
+        </div>
+    </section>
+
+    <!-- ===== NUMBERS SECTION ===== -->
+    <section class="numbers">
+        <div class="container">
+            <h2 style="text-align: center;">THE NUMBERS SPEAK FOR THEMSELVES</h2>
+            <div class="numbers-grid">
+                <div class="number-card">
+                    <div class="number-card-value">425%</div>
+                    <div class="number-card-label">Average Traffic Growth</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-card-value">8.2x</div>
+                    <div class="number-card-label">Average ROAS</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-card-value">90 Days</div>
+                    <div class="number-card-label">To Measurable Results</div>
+                </div>
+                <div class="number-card">
+                    <div class="number-card-value">$2.4M</div>
+                    <div class="number-card-label">Revenue Generated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESS SECTION ===== -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="process-intro">
+                <h2>HERE'S HOW WE GROW YOUR LOCAL BUSINESS</h2>
+                <p class="process-subtitle">Our proven growth playbook removes risk at every stage.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-step">Step 01</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your market, competitors, current digital presence, and growth opportunities. Complete audit of SEO, ads, reviews, and local listings. No cookie-cutter templates.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-step">Step 02</div>
+                    <h3>Architecture</h3>
+                    <p>We design your custom growth stack — SEO strategy, Google Ads campaigns, automated SMS/email sequences, and conversion optimization. Every element aligned to your goals.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-step">Step 03</div>
+                    <h3>Execution</h3>
+                    <p>We build, launch, and optimize daily. Weekly performance reviews, real-time dashboards, and transparent reporting. You see exactly what's working and why.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-step">Step 04</div>
+                    <h3>Scale</h3>
+                    <p>Once we find what works, we double down. Expand into new service areas, increase ad budget on winners, and compound your growth month over month.</p>
+                </div>
+            </div>
+            <div class="process-cta">
+                <button class="btn btn-primary" onclick="scrollToSection('book')">Start With Your Free Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services">
+        <div class="container">
+            <h2>WHAT'S INCLUDED IN YOUR GROWTH PACKAGE</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Local SEO Domination</h3>
+                    <ul>
+                        <li>Google Business Profile optimization</li>
+                        <li>Local citations & directory building</li>
+                        <li>Map pack optimization</li>
+                        <li>Review management & velocity</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Google Ads Management</h3>
+                    <ul>
+                        <li>High-intent keyword targeting</li>
+                        <li>Call tracking & attribution</li>
+                        <li>Predictable ROI optimization</li>
+                        <li>Daily performance monitoring</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>SMS & Email Marketing</h3>
+                    <ul>
+                        <li>Automated follow-up sequences</li>
+                        <li>Promotional campaigns</li>
+                        <li>Customer retention systems</li>
+                        <li>Lead nurturing automation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Website Speed & CRO</h3>
+                    <ul>
+                        <li>Fast loading page optimization</li>
+                        <li>Conversion rate optimization</li>
+                        <li>Mobile-first design</li>
+                        <li>Call-to-action optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Monthly Reporting</h3>
+                    <ul>
+                        <li>Custom performance dashboards</li>
+                        <li>Transparent metrics & KPIs</li>
+                        <li>Strategy adjustments based on data</li>
+                        <li>ROI & revenue tracking</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Dedicated Account Team</h3>
+                    <ul>
+                        <li>Same team from day one</li>
+                        <li>Weekly strategy check-ins</li>
+                        <li>No account manager rotation</li>
+                        <li>Direct communication access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASE STUDIES SECTION ===== -->
+    <section class="cases">
+        <div class="container">
+            <h2>RESULTS THAT SPEAK FOR THEMSELVES</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-title">Local HVAC Company</div>
+                    <div class="case-label">Challenge</div>
+                    <div class="case-content">Low call volume, inconsistent leads</div>
+                    <div class="case-label">Solution</div>
+                    <div class="case-content">SEO + Google Ads + automated follow-up</div>
+                    <div class="case-label">Results</div>
+                    <div class="case-content">340% increase in monthly calls, $0.60 CPC, 5-star review velocity doubled</div>
+                    <p class="case-quote">"From struggling to find leads to turning away overflow work"</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-title">Day Spa & Wellness</div>
+                    <div class="case-label">Challenge</div>
+                    <div class="case-content">Seasonal dips, low brand awareness</div>
+                    <div class="case-label">Solution</div>
+                    <div class="case-content">Google Ads + weekly SMS/email blasts + SEO</div>
+                    <div class="case-label">Results</div>
+                    <div class="case-content">19.4% brand CTR, consistent weekly bookings, Valentine's campaign drove 40+ bookings</div>
+                    <p class="case-quote">"The spa now has a waiting list for new clients"</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-title">Septic Services Provider</div>
+                    <div class="case-label">Challenge</div>
+                    <div class="case-content">Zero online presence, no digital leads</div>
+                    <div class="case-label">Solution</div>
+                    <div class="case-content">Google Ads + local SEO build-out</div>
+                    <div class="case-label">Results</div>
+                    <div class="case-content">First page rankings in 60 days, 93.8% optimization score, steady call volume</div>
+                    <p class="case-quote">"From zero digital leads to a full pipeline in under 3 months"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== OBJECTIONS SECTION ===== -->
+    <section class="objections">
+        <div class="container">
+            <h2>QUESTIONS WE HEAR FROM LOCAL BUSINESS OWNERS</h2>
+            <div class="objections-grid">
+                <div class="objection-card">
+                    <div class="objection-question">I've been burned by agencies before.</div>
+                    <div class="objection-answer">We get it. That's why we guarantee results or you don't pay. No long-term contracts. No vague promises. You see weekly reports and real numbers. If it's not working, we fix it or you walk.</div>
+                </div>
+                <div class="objection-card">
+                    <div class="objection-question">I don't have a big budget for marketing.</div>
+                    <div class="objection-answer">Our packages start at $2,499/month — and that includes everything. SEO, ads, email, SMS, reporting. No hidden fees. And if your ROI doesn't justify the spend, you don't pay.</div>
+                </div>
+                <div class="objection-card">
+                    <div class="objection-question">How is this different from other agencies?</div>
+                    <div class="objection-answer">We only work with local service businesses. We're not a generalist agency trying to serve everyone. We know your market, your customers, and what actually drives calls and revenue for businesses like yours.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>INVESTMENT</h2>
+            <div class="pricing-card">
+                <div class="pricing-title">Local Growth Accelerator</div>
+                <div class="pricing-amount">Starting at $2,499/month</div>
+                <div class="pricing-note">Everything included. No hidden fees.</div>
+                <ul class="pricing-features">
+                    <li>Full SEO + Google Ads Management</li>
+                    <li>SMS & Email Marketing Automation</li>
+                    <li>Monthly Custom Reporting & Dashboards</li>
+                    <li>Dedicated Account Team</li>
+                    <li>90-Day Growth Guarantee</li>
+                </ul>
+                <button class="btn btn-primary" onclick="scrollToSection('book')">Book Your Growth Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA SECTION ===== -->
+    <section class="final-cta" id="book">
+        <div class="container">
+            <h2>LET'S GROW YOUR BUSINESS</h2>
+            <p class="final-cta-subtitle">
+                Start with a free assessment. We'll audit your current digital presence, identify growth opportunities, and show you exactly what 90 days of focused execution looks like.
+            </p>
+            <!-- Calendly Inline Embed -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/evertsdigital/growth-assessment?hide_gdpr_banner=1&background_color=0a0a0a&text_color=e8e8e8&primary_color=d4af37" style="min-width:320px;height:700px;max-width:800px;margin:0 auto 40px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <p>
+                Prefer email? <a href="mailto:casey@evertsdigital.com" class="final-cta-email">casey@evertsdigital.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>
+            &copy; 2025 Everts Digital. All rights reserved. |
+            <a href="https://evertsdigital.com">evertsdigital.com</a>
+        </p>
+    </footer>
+
+    <script>
+        // Scroll-triggered fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.number-card, .process-card, .service-card, .case-card, .objection-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll function
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Track link clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('a[href*="evertsdigital.com"]')) {
+                console.log('External link clicked:', e.target.href);
+            }
+        });
+    </script>
+
+</body>
+</html>

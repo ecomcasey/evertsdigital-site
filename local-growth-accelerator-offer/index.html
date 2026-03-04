@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W4KBDBC5');</script>
-<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Growth Accelerator | Everts Digital</title>
@@ -685,13 +678,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
+
+        /* Lead Capture Form */
+        .lead-form { max-width:520px; margin:0 auto 40px; background:rgba(20,20,20,0.9); border-radius:16px; padding:2.5rem 2rem; border:1px solid rgba(212,175,55,0.2); text-align:left; }
+        .lead-form-title { font-size:1.4rem; margin-bottom:.4rem; color:#f5f3f0; text-align:center; font-family:'Inter',sans-serif; }
+        .lead-form-subtitle { font-size:.95rem; color:#a8a8a8; margin-bottom:1.5rem; text-align:center; }
+        .form-row { display:flex; gap:.75rem; margin-bottom:.75rem; }
+        .form-row.full { display:block; margin-bottom:.75rem; }
+        .form-group { flex:1; }
+        .form-group label { display:block; font-size:.8rem; color:#a8a8a8; margin-bottom:.3rem; font-weight:500; }
+        .form-group input, .form-group textarea { width:100%; padding:.7rem .9rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; color:#f5f3f0; font-size:.95rem; font-family:'Inter',sans-serif; transition:border-color .2s; outline:none; }
+        .form-group input:focus, .form-group textarea:focus { border-color:#d4af37; }
+        .form-group input::placeholder, .form-group textarea::placeholder { color:rgba(255,255,255,0.25); }
+        .form-group textarea { resize:vertical; min-height:70px; }
+        .lead-submit-btn { width:100%; margin-top:1rem; padding:1rem; background:#d4af37; color:#0a0a0a; border:none; border-radius:4px; font-size:1rem; font-weight:600; cursor:pointer; transition:all .3s; font-family:'Inter',sans-serif; }
+        .lead-submit-btn:hover { background:transparent; color:#d4af37; border:2px solid #d4af37; transform:translateY(-4px); box-shadow:0 12px 24px rgba(212,175,55,0.2); }
+        .lead-submit-btn:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+        .lead-form-note { text-align:center; margin-top:.75rem; font-size:.8rem; color:rgba(255,255,255,0.35); }
+        .lead-success { text-align:center; padding:2rem 0; }
+        @media (max-width: 600px) { .form-row { flex-direction:column; } }
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4KBDBC5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Aurora-Electric Hybrid Canvas Background -->
     <canvas id="aurora-canvas"></canvas>
 
@@ -708,7 +716,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="content-wrapper">
         <!-- Hero Section -->
         <section class="hero">
-            <h1 class="hero-headline">20â40% More Calls in 90 Days. Guaranteed.</h1>
+            <h1 class="hero-headline">20–40% More Calls in 90 Days. Guaranteed.</h1>
             <p class="hero-subheadline">Managed SEO, Google Ads, and SMS/Email marketing built specifically for local service businesses. No retainers. No surprises. Just results.</p>
             <a href="#" class="hero-cta" onclick="scrollToSection('final-cta'); return false;">Book Your Growth Assessment</a>
             <p class="hero-trust">Starting at $2,499/month</p>
@@ -752,17 +760,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="section-subtitle">If You Don't See Measurable Growth in 90 Days, You Don't Pay. Period.</p>
             <div class="guarantee-items">
                 <div class="guarantee-item">
-                    <div class="guarantee-icon">â</div>
+                    <div class="guarantee-icon">✓</div>
                     <h3 class="guarantee-item-title">No Partial Billing</h3>
                     <p class="guarantee-item-text">You don't pay for months you don't see results. It's that simple. Growth or nothing.</p>
                 </div>
                 <div class="guarantee-item">
-                    <div class="guarantee-icon">â</div>
+                    <div class="guarantee-icon">✓</div>
                     <h3 class="guarantee-item-title">No Handoffs</h3>
                     <p class="guarantee-item-text">You work with the same team from day one. No account manager rotation. Consistency drives results.</p>
                 </div>
                 <div class="guarantee-item">
-                    <div class="guarantee-icon">â</div>
+                    <div class="guarantee-icon">✓</div>
                     <h3 class="guarantee-item-title">No Guesswork</h3>
                     <p class="guarantee-item-text">Daily tracking, weekly reports, clear metrics. You'll know exactly what's working and why.</p>
                 </div>
@@ -867,46 +875,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How quickly will I see results?</span>
-                        <span class="faq-toggle">â¼</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        Quick wins show up in the first 30 daysâbetter rankings, more impressions, higher click-through rates. Measurable business impact (more calls, more leads, more revenue) typically shows in 45-90 days depending on your industry and current baseline. We focus on speed because growth matters now.
+                        Quick wins show up in the first 30 days—better rankings, more impressions, higher click-through rates. Measurable business impact (more calls, more leads, more revenue) typically shows in 45-90 days depending on your industry and current baseline. We focus on speed because growth matters now.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What if I've tried SEO before and it didn't work?</span>
-                        <span class="faq-toggle">â¼</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        Most agencies focus on vanity metrics (rankings, traffic) without connecting them to actual business results. We reverse-engineer from your goalâmore calls, more revenueâand build the entire strategy around that. We don't care about top 3 rankings unless they drive calls. Different approach, different results.
+                        Most agencies focus on vanity metrics (rankings, traffic) without connecting them to actual business results. We reverse-engineer from your goal—more calls, more revenue—and build the entire strategy around that. We don't care about top 3 rankings unless they drive calls. Different approach, different results.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Do you work with businesses in my industry?</span>
-                        <span class="faq-toggle">â¼</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        We specialize in local service businessesâHVAC, plumbing, electrical, roofing, pest control, lawn care, and similar trades. If your business lives or dies based on local service calls, we know how to fill your pipeline. We understand the economics, the competition, and what works in your market.
+                        We specialize in local service businesses—HVAC, plumbing, electrical, roofing, pest control, lawn care, and similar trades. If your business lives or dies based on local service calls, we know how to fill your pipeline. We understand the economics, the competition, and what works in your market.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What makes this different from other agencies?</span>
-                        <span class="faq-toggle">â¼</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        Most agencies are generalists. We're laser-focused on local service growth. We don't measure success by rankings or clicksâwe measure it by calls and revenue. We're also transparent: daily tracking, weekly reports, and we tie everything back to your 90-day guarantee. You know what you're paying for, and we guarantee results or you don't pay.
+                        Most agencies are generalists. We're laser-focused on local service growth. We don't measure success by rankings or clicks—we measure it by calls and revenue. We're also transparent: daily tracking, weekly reports, and we tie everything back to your 90-day guarantee. You know what you're paying for, and we guarantee results or you don't pay.
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What if I'm not happy?</span>
-                        <span class="faq-toggle">â¼</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        If we don't deliver measurable growth in 90 days, you don't pay. It's that simple. Our guarantee is real, not marketing fluff. But if we do hit your targetâand we willâwe scale what works and keep the momentum going.
+                        If we don't deliver measurable growth in 90 days, you don't pay. It's that simple. Our guarantee is real, not marketing fluff. But if we do hit your target—and we will—we scale what works and keep the momentum going.
                     </div>
                 </div>
             </div>
@@ -924,12 +932,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="final-cta scroll-reveal" id="final-cta">
             <h2 class="final-cta-title">Let's Build Your Growth Engine</h2>
             <p class="final-cta-price">Starting at $2,499/month</p>
-            <div class="button-group">
-                <a href="mailto:casey@evertsdigital.com?subject=Growth%20Assessment%20Request&body=Hi%20Casey,%0A%0AI'd%20like%20to%20schedule%20a%20growth%20assessment.%0A%0AMy%20business:%20%0ALocation:%20%0ACurrent%20marketing:%20%0A%0AThanks!" class="button-primary">Book Your Call</a>
-                <a href="mailto:casey@evertsdigital.com" class="button-secondary">Email Us Instead</a>
-            </div>
+
+            <!-- Calendly Inline Embed -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/evertsdigital/growth-assessment?hide_gdpr_banner=1&background_color=0a0a0a&text_color=e8e8e8&primary_color=d4af37" style="min-width:320px;height:700px;max-width:800px;margin:0 auto 40px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
             <div class="final-cta-email">
-                <p>Questions? Reach out: <a href="mailto:casey@evertsdigital.com">casey@evertsdigital.com</a></p>
+                <p>Prefer email? <a href="mailto:casey@evertsdigital.com">casey@evertsdigital.com</a></p>
             </div>
         </section>
 
@@ -983,13 +992,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         function animate() {
-            // Full clear each frame â no trails
+            // Full clear each frame — no trails
             ctx.fillStyle = '#0a0a0a';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             time += 0.5;
 
-            // Wave configuration â 3 translucent ribbons
+            // Wave configuration — 3 translucent ribbons
             const waves = [
                 { baseY: canvas.height * 0.28, width: 80, freq: 0.003, speed: 0.0006, amp: 40, phase: 0 },
                 { baseY: canvas.height * 0.52, width: 90, freq: 0.0025, speed: 0.0005, amp: 50, phase: 1.5 },
@@ -1027,7 +1036,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
                 ctx.closePath();
 
-                // Gradient fill â translucent gold
+                // Gradient fill — translucent gold
                 const grad = ctx.createLinearGradient(0, wave.baseY - wave.width, 0, wave.baseY + wave.width);
                 grad.addColorStop(0, `rgba(212, 175, 55, 0)`);
                 grad.addColorStop(0.3, `rgba(212, 175, 55, ${baseAlpha * 0.5})`);
@@ -1037,7 +1046,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 ctx.fillStyle = grad;
                 ctx.fill();
 
-                // Subtle center line â the "electric" spine of the wave
+                // Subtle center line — the "electric" spine of the wave
                 ctx.beginPath();
                 ctx.strokeStyle = `rgba(212, 175, 55, ${0.06 + mouseInfluence * 0.04})`;
                 ctx.lineWidth = 1;
@@ -1050,7 +1059,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
                 ctx.stroke();
 
-                // Second thinner spine â offset slightly
+                // Second thinner spine — offset slightly
                 ctx.beginPath();
                 ctx.strokeStyle = `rgba(230, 200, 80, ${0.03 + mouseInfluence * 0.02})`;
                 ctx.lineWidth = 0.5;
@@ -1133,7 +1142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
         }
 
-        // Nav scroll behavior â float in hero, sticky transparent after
+        // Nav scroll behavior — float in hero, sticky transparent after
         const headerFixed = document.querySelector('.header-fixed');
         const heroSection = document.querySelector('.hero');
         const navObserver = new IntersectionObserver(([entry]) => {
@@ -1155,6 +1164,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 faqItem.classList.toggle('active');
             });
         });
+    </script>
+    <script>
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyi9slW14cdMcwPVQJtAuZvi528s29VrfNdbhtWstaOhQ9m7UA_BK8mmBKWYZe0Rzk2/exec';
+    function handleLeadSubmit(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        btn.disabled = true; btn.textContent = 'Submitting...';
+        const form = document.getElementById('captureForm');
+        const data = Object.fromEntries(new FormData(form));
+        data.source = 'evertsdigital';
+        data.page = 'offer';
+        fetch(APPS_SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) })
+        .then(() => {
+            form.style.display = 'none';
+            document.querySelector('.lead-form-note').style.display = 'none';
+            document.getElementById('successState').style.display = 'block';
+        })
+        .catch(() => {
+            btn.disabled = false; btn.textContent = 'Get My Free Assessment →';
+            alert('Something went wrong. Please email casey@evertsdigital.com directly.');
+        });
+    }
     </script>
 </body>
 </html>

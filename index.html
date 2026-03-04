@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W4KBDBC5');</script>
-<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everts Digital — Growth Marketing for Local & Ecom Businesses</title>
@@ -18,7 +11,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:description" content="Everts Digital helps local service businesses and ecommerce brands grow with AI-powered SEO, paid search, and strategic marketing.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://evertsdigital.com">
-        <link rel="canonical" href="https://evertsdigital.com/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' fill='%231a1a1a'/><circle cx='9' cy='9' r='4' fill='%231a1a1a'/><circle cx='18' cy='9' r='4' fill='%231a1a1a'/><circle cx='27' cy='9' r='4' fill='%23d4af37'/><circle cx='9' cy='18' r='4' fill='%231a1a1a'/><circle cx='18' cy='18' r='4' fill='%231a1a1a'/><circle cx='27' cy='18' r='4' fill='%231a1a1a'/><circle cx='9' cy='27' r='4' fill='%231a1a1a'/><circle cx='18' cy='27' r='4' fill='%231a1a1a'/><circle cx='27' cy='27' r='4' fill='%231a1a1a'/></svg>">
@@ -645,13 +637,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Lead Capture Form */
+        .lead-form { max-width:520px; margin:0 auto; background:var(--secondary-black); border-radius:16px; padding:2.5rem 2rem; border:1px solid rgba(212,175,55,0.2); text-align:left; }
+        .lead-form-title { font-size:1.4rem; margin-bottom:.4rem; color:#fff; text-align:center; }
+        .lead-form-subtitle { font-size:.95rem; color:var(--text-gray); margin-bottom:1.5rem; text-align:center; }
+        .form-row { display:flex; gap:.75rem; margin-bottom:.75rem; }
+        .form-row.full { display:block; margin-bottom:.75rem; }
+        .form-group { flex:1; }
+        .form-group label { display:block; font-size:.8rem; color:var(--text-gray); margin-bottom:.3rem; font-weight:500; }
+        .form-group input, .form-group textarea { width:100%; padding:.7rem .9rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:8px; color:#fff; font-size:.95rem; font-family:inherit; transition:border-color .2s; outline:none; }
+        .form-group input:focus, .form-group textarea:focus { border-color:var(--accent-gold); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color:rgba(255,255,255,0.3); }
+        .form-group textarea { resize:vertical; min-height:70px; }
+        .lead-submit-btn { width:100%; margin-top:1rem; padding:1rem; background:var(--accent-gold); color:var(--primary-black); border:none; border-radius:50px; font-size:1.1rem; font-weight:700; cursor:pointer; transition:all .3s; letter-spacing:.5px; }
+        .lead-submit-btn:hover { background:#fff; transform:translateY(-2px); box-shadow:0 8px 25px rgba(212,175,55,0.3); }
+        .lead-submit-btn:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+        .lead-form-note { text-align:center; margin-top:.75rem; font-size:.8rem; color:rgba(255,255,255,0.4); }
+        .lead-success { text-align:center; padding:2rem 0; }
+        @media (max-width: 600px) { .form-row { flex-direction:column; } }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4KBDBC5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
     <nav id="navbar">
         <div class="logo-container">
@@ -811,7 +818,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2>Ready to Scale Your Business?</h2>
         <p>Let's build a growth strategy that transforms your digital presence and drives real revenue.</p>
         <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.85); margin-top: 1rem; margin-bottom: 2rem; font-weight: 600;">Starting at $2,499/mo</p>
-        <a href="mailto:casey@evertsdigital.com" class="btn-primary">Schedule a Call</a>
+
+        <div class="lead-form" id="leadForm">
+            <h3 class="lead-form-title">Get Your Free Growth Assessment</h3>
+            <p class="lead-form-subtitle">Tell us about your business. We'll reply within 24 hours.</p>
+            <form id="captureForm" onsubmit="handleLeadSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group"><label>Name *</label><input type="text" name="name" placeholder="Your name" required></div>
+                    <div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="you@company.com" required></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="(555) 123-4567"></div>
+                    <div class="form-group"><label>Business Name</label><input type="text" name="business" placeholder="Your business"></div>
+                </div>
+                <div class="form-row full"><div class="form-group"><label>Website URL</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div></div>
+                <div class="form-row full"><div class="form-group"><label>What are you looking to accomplish?</label><textarea name="message" placeholder="More leads, better ads, website help — give us the quick version"></textarea></div></div>
+                <button type="submit" class="lead-submit-btn" id="submitBtn">Get My Free Assessment →</button>
+            </form>
+            <p class="lead-form-note">No spam. No obligation. Just a real conversation about growth.</p>
+            <div class="lead-success" id="successState" style="display:none;">
+                <div style="font-size:3rem;margin-bottom:1rem;">✓</div>
+                <h3 style="font-size:1.5rem;color:var(--accent-gold);margin-bottom:.5rem;">We Got Your Info</h3>
+                <p style="color:var(--text-gray);">Casey will reach out within 24 hours. Talk soon.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -885,6 +915,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
             });
         });
+    </script>
+    <script>
+    // Lead Capture Form Handler
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyi9slW14cdMcwPVQJtAuZvi528s29VrfNdbhtWstaOhQ9m7UA_BK8mmBKWYZe0Rzk2/exec';
+    function handleLeadSubmit(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        btn.disabled = true; btn.textContent = 'Submitting...';
+        const form = document.getElementById('captureForm');
+        const data = Object.fromEntries(new FormData(form));
+        data.source = 'evertsdigital';
+        data.page = 'homepage';
+        fetch(APPS_SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) })
+        .then(() => {
+            form.style.display = 'none';
+            document.querySelector('.lead-form-note').style.display = 'none';
+            document.getElementById('successState').style.display = 'block';
+        })
+        .catch(() => {
+            btn.disabled = false; btn.textContent = 'Get My Free Assessment →';
+            alert('Something went wrong. Please email casey@evertsdigital.com directly.');
+        });
+    }
     </script>
 </body>
 </html>
