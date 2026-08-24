@@ -823,6 +823,7 @@
             <h3 class="lead-form-title">Get Your Free Growth Assessment</h3>
             <p class="lead-form-subtitle">Tell us about your business. We'll reply within 24 hours.</p>
             <form id="captureForm" onsubmit="handleLeadSubmit(event)">
+                <input type="text" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
                 <div class="form-row">
                     <div class="form-group"><label>Name *</label><input type="text" name="name" placeholder="Your name" required></div>
                     <div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="you@company.com" required></div>
@@ -918,6 +919,7 @@
     </script>
     <script>
     // Lead Capture Form Handler
+    const LEAD_TS = Date.now(); // spam guard: time-to-submit
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyi9slW14cdMcwPVQJtAuZvi528s29VrfNdbhtWstaOhQ9m7UA_BK8mmBKWYZe0Rzk2/exec';
     function handleLeadSubmit(e) {
         e.preventDefault();
@@ -925,6 +927,7 @@
         btn.disabled = true; btn.textContent = 'Submitting...';
         const form = document.getElementById('captureForm');
         const data = Object.fromEntries(new FormData(form));
+        data.ts = LEAD_TS;
         data.source = 'evertsdigital';
         data.page = 'homepage';
         fetch(APPS_SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) })
